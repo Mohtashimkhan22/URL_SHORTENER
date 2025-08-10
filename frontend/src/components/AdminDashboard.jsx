@@ -6,8 +6,8 @@ const AdminDashboard = ({ token }) => {
   const [urls, setUrls] = useState([]);
   const [error, setError] = useState('');
 
-  const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
-  const BASE_URL = import.meta.env.VITE_BASE_URL || 'http://localhost:5000';
+  const API_BASE = import.meta.env.REACT_APP_API_BASE || 'http://localhost:5000';
+  const BASE_URL = import.meta.env.REACT_APP_BASE_URL || 'http://localhost:5000';
 
   const fetchUrls = async () => {
     try {
