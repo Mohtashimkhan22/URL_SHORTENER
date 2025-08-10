@@ -28,7 +28,7 @@ router.post('/shorten', async (req, res) => {
     const existing = await Url.findOne({ longUrl });
     if (existing) {
       return res.json({
-        shortUrl: `${process.env.BASE_URL}/${existing.shortCode}`,
+        shortUrl: `${process.env.BASE_URL.replace(/\/$/, '')}/${existing.shortCode}`,
         shortCode: existing.shortCode
       });
     }
@@ -41,7 +41,10 @@ router.post('/shorten', async (req, res) => {
 
     const newUrl = await Url.create({ longUrl, shortCode });
 
-    res.json({ shortUrl: `${process.env.BASE_URL}/${shortCode}`, shortCode });
+    res.json({
+      shortUrl: `${process.env.BASE_URL.replace(/\/$/, '')}/${shortCode}`,
+      shortCode
+    });
   } catch (error) {
     console.error('POST /api/shorten error:', error);
     res.status(500).json({ error: 'Server error' });
