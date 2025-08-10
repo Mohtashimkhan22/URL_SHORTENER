@@ -1,0 +1,96 @@
+.admin-dashboard {
+  padding: 20px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f4f7fb;
+  min-height: 100vh;
+}
+
+.admin-dashboard h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2d3748;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.error-message {
+  color: #ff4d4f;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 500;
+  background-color: rgba(255, 77, 79, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.admin-dashboard table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin-dashboard table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: rgb(182, 201, 223);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin-dashboard th,
+.admin-dashboard td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 15px;
+}
+
+.admin-dashboard th {
+  background: linear-gradient(135deg, #4cafef, #3a9edc);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.admin-dashboard tr:nth-child(even) {
+  background-color: #f8fafc;
+  color: #000;
+}
+
+.admin-dashboard tr:nth-child(odd) {
+  background-color: #f1f5f9;
+  color: #000;
+}
+
+/* .admin-dashboard tr:hover {
+  background-color: #eaf4fc;
+  transition: background-color 0.2s ease-in-out;
+} */
+
+.admin-dashboard a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.admin-dashboard a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .admin-dashboard table {
+    font-size: 14px;
+  }
+  .admin-dashboard th,
+  .admin-dashboard td {
+    padding: 8px;
+  }
+}
